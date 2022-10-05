@@ -1,16 +1,19 @@
-# This is a sample Python script.
-
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+from random import randint
+print("Введите кол-во цифр")
+num = int(input())
+sumpolojitelnyh = 0
+sumotricatelnyh = 0
+spisok = []
+for i in range(num):
+    rnd = randint(-100, 100)
+    if rnd == 0:
+        while rnd == 0:
+            rnd = randint(-100, 100)
+    if rnd > 0:
+        sumpolojitelnyh = sumpolojitelnyh + rnd
+    elif rnd < 0:
+        sumotricatelnyh = sumotricatelnyh + rnd
+    spisok.append(rnd)
+print("Сумма положительных чисел равна: ", sumpolojitelnyh)
+print("Сумма отрицательных чисел равна: ", sumotricatelnyh)
+print("Список всех чисел: ", spisok)
